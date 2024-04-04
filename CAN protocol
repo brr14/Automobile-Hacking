@@ -1,0 +1,28 @@
+CAN protocol
+a) Controller Area Network most commonly used in automobile electronics.It was designed for rocust communication 
+within the vehicle between micro-controllers and devices without the need of a host computer which makes the 
+communication easier and efficient.
+b) It works as a broadcast type of network. CAN runs over two wires, CAN high and CAN low. Due to the "noise" 
+inherent in automobile systems, CAN uses differential signaling. This is where the protocol raises and lowers 
+the voltage on the two wires to communicate. In both high speed and low speed CAN, signaling drives the high
+wire towards 5v and the low wire towards 0v when transmitting a zero (0) but doesn't drive either wire when
+sending a one (1). 
+
+Types of CAN messages
+a) Data Frame - used for data transmission, the data source node sends the data frame. They are of two types of 
+data frames standard and extended. The standard has 11 identifier bits and the extended has 29 bits.
+b) Remote Frame - used when the data destination node requests the data from the source.
+c) Error Frame - has two different fields: error flags and error delimiter(indicates the end of error message).
+d) Overload frame -  has two different fields:Overload flag and overload delimiter. 
+
+The OBD (On Board Diagnostics) Connector
+a) helps in reading the oon-board computers, it has 16 pins.
+b) Provides access to the status of various vehicle subsystems and the ability to monitor engine and vehicle 
+performance. It can also be used to check for diagnostic trouble codes (DTCs).
+
+CAN Bus Packet Layout
+a) Arbitration ID- This field is used to identify the message and its priority on the network. 
+b)Identifier Extension - The Identifier Extension bit is used to differentiate between standard frames 
+and extended frames. 
+c) Data Length Code - The DLC field is 4 bits long and indicates the number of bytes in the data field of the
+frame. It can specify anywhere from 0 to 8 bytes of data.
